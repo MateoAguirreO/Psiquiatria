@@ -1,0 +1,10 @@
+{
+  "feature_set": "egemaps",
+  "base_winner": "AdaBoostClassifier",
+  "kd_winner": "AdaBoostRegressor",
+  "best_alpha": 0.0,
+  "base_threshold": 0.33,
+  "kd_threshold": 0.23,
+  "base_roc_auc_mean": 0.4986425726217195,
+  "kd_roc_auc_mean_at_alpha0.5": 0.5416398826323867
+}

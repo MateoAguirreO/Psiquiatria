@@ -1,0 +1,72 @@
+{
+  "disorder": "ansiedad",
+  "seed": 42,
+  "n_dev_patients": 63,
+  "n_test_patients": 16,
+  "teacher_config": {
+    "emb_model": "wav2vec2-large-robust",
+    "hidden": 128,
+    "pooling": "meanmax",
+    "loss_type": "bce_posw",
+    "use_warmup": false,
+    "dropout_p": 0.4,
+    "mixup": "fix",
+    "pca": false
+  },
+  "teacher_oof_n_repeats": 10,
+  "curated_classifiers": [
+    "LogisticRegression",
+    "RandomForestClassifier",
+    "ExtraTreesClassifier",
+    "GradientBoostingClassifier",
+    "AdaBoostClassifier",
+    "BaggingClassifier",
+    "DecisionTreeClassifier",
+    "KNeighborsClassifier",
+    "GaussianNB",
+    "QuadraticDiscriminantAnalysis",
+    "LinearDiscriminantAnalysis",
+    "XGBClassifier"
+  ],
+  "curated_regressors": [
+    "LinearRegression",
+    "Ridge",
+    "Lasso",
+    "ElasticNet",
+    "RandomForestRegressor",
+    "ExtraTreesRegressor",
+    "GradientBoostingRegressor",
+    "AdaBoostRegressor",
+    "BaggingRegressor",
+    "DecisionTreeRegressor",
+    "KNeighborsRegressor",
+    "XGBRegressor"
+  ],
+  "selections": {
+    "librosa": {
+      "feature_set": "librosa",
+      "base_winner": "DecisionTreeClassifier",
+      "kd_winner": "ElasticNet",
+      "best_alpha": 0.0,
+      "base_threshold": 0.2,
+      "kd_threshold": 0.2,
+      "base_roc_auc_mean": 0.5011554029888924,
+      "kd_roc_auc_mean_at_alpha0.5": 0.5
+    },
+    "egemaps": {
+      "feature_set": "egemaps",
+      "base_winner": "AdaBoostClassifier",
+      "kd_winner": "AdaBoostRegressor",
+      "best_alpha": 0.0,
+      "base_threshold": 0.33,
+      "kd_threshold": 0.23,
+      "base_roc_auc_mean": 0.4986425726217195,
+      "kd_roc_auc_mean_at_alpha0.5": 0.5416398826323867
+    }
+  },
+  "library_versions": {
+    "xgboost": "3.4.1",
+    "sklearn": "1.9.0",
+    "torch": "2.13.0+cu130"
+  }
+}

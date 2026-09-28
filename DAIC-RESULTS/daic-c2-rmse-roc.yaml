@@ -1,0 +1,38 @@
+seed: 103
+
+corpora: daic_woz
+data_path: /home/ci2dt2-ai/Proyectos/Psiquiatria/DATA-DAIC
+
+processor_name_or_path: facebook/wav2vec2-base
+pooling_mode: mean
+return_attention_mask: False
+freeze_feature_extractor: True
+use_transcript_segmentation: True
+segment_group_size: 5
+segment_keep_remainder: True
+segment_min_remainder_duration: 0.0
+label_column: class_2
+
+
+# Training Arguments
+output_dir: /home/ci2dt2-ai/Proyectos/Psiquiatria/DAIC-RESULTS
+num_train_epochs: 10
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 1
+evaluation_strategy: steps
+fp16: False
+save_steps: 10
+eval_steps: 10
+logging_steps: 10
+learning_rate: 1e-5
+save_total_limit: 2
+
+
+cache_dir: ./content/cache
+checkpoint: null
+resume_from_checkpoint: False
+
+# Optional: if planning to test the model on a different dataset
+test_corpora: null
+test_corpora_path: null

@@ -1,0 +1,34 @@
+# SSL Embedding Pipeline — Requirements
+# Instalar con: pip install -r requirements.txt
+
+# ── Core deep learning
+torch>=2.1.0
+torchaudio>=2.1.0
+transformers>=4.40.0
+accelerate>=0.27.0
+
+# ── Audio
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# ── Data / ML
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+pyarrow>=14.0.0        # para formato Parquet
+
+# ── Progress & utils
+tqdm>=4.66.0
+
+# ── Visualización (opcional, para analysis_utils.py)
+matplotlib>=3.7.0
+# umap-learn>=0.5.0    # descomenta si quieres UMAP
+
+# ── Notas de instalación:
+#pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
+#
+# Mac (MPS):
+#   pip install torch torchaudio
+#
+# CPU:
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu

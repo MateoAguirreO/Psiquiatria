@@ -1,0 +1,14 @@
+model,feature_set,alpha,roc_auc_mean,roc_auc_std,f1_mean,f1_std
+BiLSTM,-,-,0.5881481481481481,0.14038453949791327,0.0,0.0
+Student_Base (DecisionTreeClassifier),librosa,1.0,0.5011554029888924,,,
+Student_Soft (ElasticNet),librosa,0.0,0.5,0.0,0.0,0.0
+Student_KD (ElasticNet),librosa,0.25,0.5,0.0,0.0,0.0
+Student_KD (ElasticNet),librosa,0.5,0.5,0.0,0.0,0.0
+Student_KD (ElasticNet),librosa,0.75,0.5,0.0,0.0,0.0
+Student_KD (ElasticNet),librosa,1.0,0.5,0.0,0.0,0.0
+Student_Base (AdaBoostClassifier),egemaps,1.0,0.4986425726217195,,,
+Student_Soft (AdaBoostRegressor),egemaps,0.0,0.6470729746051778,0.1733379539111851,0.0,0.0
+Student_KD (AdaBoostRegressor),egemaps,0.25,0.5663054364901721,0.1476770893194667,0.0,0.0
+Student_KD (AdaBoostRegressor),egemaps,0.5,0.5416398826323867,0.1344899105076427,0.0,0.0
+Student_KD (AdaBoostRegressor),egemaps,0.75,0.5169402543250733,0.0613770508234904,0.0166666666666666,0.0333333333333333
+Student_KD (AdaBoostRegressor),egemaps,1.0,0.5081164707082205,0.0551344006414755,0.1324943433473298,0.0869189642183497

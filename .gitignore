@@ -1,0 +1,70 @@
+# ===== Entornos virtuales =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== IDEs / editores =====
+.idea/
+.vscode/
+
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+log_general.txt
+log_ejecucion_final.txt
+stacking_log.txt
+
+# ===== Secretos / credenciales (por si acaso) =====
+.env
+.env.*
+*.pem
+*.key
+*credentials*.json
+
+# ===== Datasets con datos de pacientes / con licencia restringida =====
+# DAIC-WOZ tiene licencia de uso que prohíbe su redistribución, y
+# "Clasificación Final" contiene audio/vídeo real de pacientes (dato sensible).
+# Nunca deben subirse a GitHub, sea el repo público o privado.
+/DATA-DAIC/
+/embeddings_daic/
+/Clasificación Final/
+/DAIC-RESULTS/features/
+/sequences_au/
+/sequences_mediapipe/
+
+# ===== Salidas de experimentos / entrenamientos (reproducibles desde el código) =====
+fase3/
+fase3_viejo/
+results_DL/
+holdout_outputs/
+merged_outputs/
+fusion_output_final/
+stacking_output/
+
+# ===== Modelos y checkpoints pesados =====
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.onnx
+*.pkl
+*.joblib
+
+# ===== Assets binarios de terceros (se descargan aparte) =====
+/face_landmarker.task

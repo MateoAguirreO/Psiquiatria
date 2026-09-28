@@ -1,0 +1,10 @@
+{
+  "feature_set": "librosa",
+  "base_winner": "DecisionTreeClassifier",
+  "kd_winner": "ElasticNet",
+  "best_alpha": 0.0,
+  "base_threshold": 0.2,
+  "kd_threshold": 0.2,
+  "base_roc_auc_mean": 0.5011554029888924,
+  "kd_roc_auc_mean_at_alpha0.5": 0.5
+}
